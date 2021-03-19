@@ -1,22 +1,22 @@
-
 #include <stdio.h>
-int a[5]={0,10,20,30,40};
-void printfAll(){
-    for (int i=0;i<5; i++) printf("%d " ,&a[i]);
-        printf("\n");
-}
-   int main()
-   {
+struct POINT {
+float x,y,z;
+};
 
-              printfAll();
-              int *p =&a[2];
-              *p =222;
-    printfAll();
-              p=p +2;
-              *p =666;
-   printfAll();
-           *p--;
-              *p =555;
-               printfAll();
+ struct POINT point[5]={0,0,0},{1,0,0},{0,1,0},{0,0,1},{1,1,1};
 
-   }
+
+ int main()
+ {
+
+       struct POINT *p =& point[0] ;
+       printf("%.2 f %.2f %.2f\n",p->x,p->y,p->z);
+
+           p++;
+          printf("%.2 f %.2f %.2f\n",p->x,p->y,p->z);
+
+   p++;
+          printf("%.2 f %.2f %.2f\n",p->x,p->y,p->z);
+ }
+
+
