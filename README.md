@@ -218,7 +218,7 @@ a.y=2
 printf("%f%f\n",a.x,a.y);
 }
 ```
-``c
+```c
 #incldue <stdio.h>
 
 struct POINT {
@@ -233,7 +233,8 @@ printf("%f%f\n",a.x,a.y);
 return 0;
 }
 ```
-```c#include <stdio.h>
+```c
+#include <stdio.h>
 struct POINT {
 float x,y,z;
 };
