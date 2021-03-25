@@ -195,7 +195,7 @@ printf("%f%f\n",a.x,a.y);
 return 0;
 }
 ```
-``c
+```c
 #incldue <stdio.h>
 
 struct DATA {
