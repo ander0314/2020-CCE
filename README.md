@@ -281,7 +281,7 @@ int main()
         }
         }
 ```
-``c
+```c
 #include <stdio.h>
 int main()
 {
