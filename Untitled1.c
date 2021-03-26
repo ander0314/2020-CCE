@@ -1,12 +1,14 @@
 #include <stdio.h>
 int main()
 {
+    char line [10]="decline";
+    char line2[10]={'p','r','o','p','e','r','\0'};
+    printf("%s\n",line);
+    printf("%s\n",line2);
 
-        int a[5]={0,10,20,30,40};
-        int *p =&a[2];
-        *p=222;
 
-        p=p+2;
-        *p=666;
-
+    char line3[]="majority";
+    printf("%s\n", line3);
+    char line4[]={'m','a','j','o','r','i','t','y'};
+    printf("你看看你看看，現在印出來的line4: ==%s==\n", line4);
 }
