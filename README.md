@@ -289,4 +289,17 @@ int main()
         printf("請看看值是多少:%d",'\0');
 }
 ```
+```c
+# include <stdio.h>
+int main()
+{
+
+        char line [10]="decline";
+ char line2 [10]={'p','r','o','p','r','r','\0'};
+            printf("%s,\n", line);
+               printf("%s,\n", line2);
+        }
+        }
+```
+
 
