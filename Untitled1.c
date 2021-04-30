@@ -1,14 +1,41 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+char line [1000];
+char tree [1000000][32];
+int compare(const void*p1,const void*p2){
+	return strcmp( (char*)p1, (char*) p2);
+	}
 int main()
 {
-    char line [10]="decline";
-    char line2[10]={'p','r','o','p','e','r','\0'};
-    printf("%s\n",line);
-    printf("%s\n",line2);
+	int T;
+	scanf("%d\n\n", &T);
+
+	for (int t=0; t<T; t++){
+		int N=0;
+		while (gets (line)!=NULL ){
+		if(strcmp (line,"")==0 )break;
+
+		strcpy (tree [N], line);
+		N++;
+		 }
+		 qsort( tree, N, 32, compare);
+		 if(t>0) printf("\n");
+		 int ans=1;
+		 printf("%s ", tree[0] );
+		 for(int i=0; i<N-1; i++){
+		if (strcmp(tree[i],tree[i+1]) == 0 ){
+		ans++;
+		}else{
+		printf("%.4f\n", 100*ans/(float)N );
+		ans=1;
+		 	printf("%s ", tree[i+1 ]);
+}
+}
+	printf("%.4f\n", 100*ans/(float)N );
+}
 
 
-    char line3[]="majority";
-    printf("%s\n", line3);
-    char line4[]={'m','a','j','o','r','i','t','y'};
-    printf("你看看你看看，現在印出來的line4: ==%s==\n", line4);
+
+
 }
