@@ -1,22 +1,19 @@
 #include <stdio.h>
-struct POINT {
-float x,y,z;
-};
+char line [2000];
+int main()
+{
+  for (int t=0; gets(line); t++){
 
- struct POINT point[5]={0,0,0},{1,0,0},{0,1,0},{0,0,1},{1,1,1};
+  for(int i=0; i<256; i++) ans[i]=0;
 
+  for(int i=0; line[i]!=0; i++){
+  	char c =line[i];
+  	ans[c] ++;
+  	}
 
- int main()
- {
-
-       struct POINT *p =& point[0] ;
-       printf("%.2 f %.2f %.2f\n",p->x,p->y,p->z);
-
-           p++;
-          printf("%.2 f %.2f %.2f\n",p->x,p->y,p->z);
-
-   p++;
-          printf("%.2 f %.2f %.2f\n",p->x,p->y,p->z);
- }
-
-
+  	if(t>0) printf("\n");
+  	for(int i=0; i<256; i++){
+  	if(ans[i]>0) printf("%d %d\n", i, ans[i]);
+  	}
+  	   }
+  	 }
