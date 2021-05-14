@@ -387,4 +387,63 @@ int main()
   	 }
 ```
 ```c
+#include <stdio.h>
+char line[2000];
+int main()
+{
 
+	for(int t=0; gets(line); t++)
+	{
+	int ans[256]={};
+	
+	for(int i=0; line[i]!=0; i++){
+	char c= line[i];
+	ans[c]++;
+	}
+	
+	if(t>0) printf("\n"); 
+	 for(int i=0; i<256;i++){
+	 if(ans[i]>0) printf("%d %d\n",i,ans[i]);
+	 
+	}
+	
+	}
+	
+	}
+```
+```c
+#include <stdio.h>
+int main()
+{
+    int a,b;
+
+    while(scanf("%d%d",&a, &b)==2)
+    {
+        if (a==0 &&b==0)
+            break;
+        int c=0;
+        int ans=0;
+        while (a>0||b>0)
+        {
+            int a1=a%10;
+            int b1=b%10;
+            if(c+a1+b1>=10)
+            {
+                ans++;
+                c=1;
+            }
+            else
+                c=0;
+
+            a=a/10;
+            b=b/10;
+            }
+            if (ans==0)
+                printf("No carry operation.\n");
+            else if(ans==1)
+                printf("1 carry operation.\n");
+            else
+                printf ("%d carry operations.\n",ans);
+        }
+    }
+```
