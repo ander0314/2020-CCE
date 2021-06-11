@@ -447,3 +447,27 @@ int main()
         }
     }
 ```
+```c
+void setup()
+ size(400,200);
+ }
+ void draw()
+ background(57,255,127);
+ fill(255);
+ ellipse(100,100 180,180);
+ fill(255,0,0);
+ float stop=mouseX/50.0;
+ text(stop, 200,100)
+ arc(100,100, 180,180, 0,stop);
+ }
+ ```
+ ```c
+ void setup(){
+  size(400,200);
+  fill(255,0,0);
+  textSize(40);
+}
+void draw(){
+  background(57,255,127);
+  arc(100,100, 180,180, radians(90);
+  ```
